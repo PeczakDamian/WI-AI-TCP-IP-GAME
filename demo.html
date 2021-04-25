@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Packet Trainer / TCP/UDP Assistant</title>
+	<link rel="stylesheet" type="text/css" href="ui/game-ui.css" />
+	<link rel="stylesheet" type="text/css" href="ui/game-tcp.css" />
+	<style>
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>Gra w "statki" TCP/UDP</h1>
+		<p>Packet Trainer / TCP/UDP Assistant. Odkryj wszystkie pola datagramu.</p>
+	</header>
+	<nav id="gameCtrl">
+		<button id="btnNewGame">NEW GAME</button>
+		<button id="btnRematch">REMATCH</button>
+		<button id="btnPause">PAUSE</button>
+	</nav>
+	<section id="canva">
+		<div id="intro">
+			<label>PLAYER NAME<pre></pre><input type="text" value="Damian"></label>
+			<button id="btnStartGame">START</button>
+		</div>
+		<div id="loading">
+			<h2 data-time="100" data-duration="1000" class="red noDsp">GET READY</h2>
+			<h2 data-time="1100" data-duration="1000" class="yellow noDsp">READY?</h2>
+			<h2 data-time="2200" data-duration="500" class="green noDsp">START!</h2>
+		</div>
+		<div id="tcp">
+			<div data-cell="hdr"></div>
+			<div data-cell="hdr"></div><div data-cell="hdr"></div><div data-cell="hdr"></div><div data-cell="hdr"></div>
+			<div data-cell="hdr"></div><div data-cell="hdr"></div><div data-cell="hdr"></div><div data-cell="hdr"></div>
+			<div data-cell="hdr"></div><div data-cell="hdr"></div><div data-cell="hdr"></div><div data-cell="hdr"></div>
+			<div data-cell="hdr"></div><div data-cell="hdr"></div><div data-cell="hdr"></div><div data-cell="hdr"></div>
+			<div data-cell="hdr"></div><div data-cell="hdr"></div><div data-cell="hdr"></div><div data-cell="hdr"></div>
+			<div data-cell="hdr"></div><div data-cell="hdr"></div><div data-cell="hdr"></div><div data-cell="hdr"></div>
+			<div data-cell="hdr"></div><div data-cell="hdr"></div><div data-cell="hdr"></div><div data-cell="hdr"></div>
+			<div data-cell="hdr"></div><div data-cell="hdr"></div><div data-cell="hdr"></div><div data-cell="hdr"></div>
+			<div data-cell="hdl">0</div><div></div><div></div>
+			<div data-cell="hdl">32</div><div></div>
+			<div data-cell="hdl">64</div><div></div>
+			<div data-cell="hdl">96</div><div></div><div></div><div></div><div></div>
+			<div data-cell="hdl">128</div><div></div><div></div>
+			<div data-cell="hdl">160</div><div></div>
+			<!-- <div data-cell="hdl">0</div><div>Source port</div><div>Destination port</div>
+				<div data-cell="hdl">32</div><div>Sequence number</div>
+				<div data-cell="hdl">64</div><div>Ack number</div>
+			<div data-cell="hdl">96</div><div>Data offset</div><div>Res</div><div>Flags</div><div>Window size</div>
+			<div data-cell="hdl">128</div><div>Header and Data checksum</div><div>Urgent pointer</div>
+			<div data-cell="hdl">160</div><div>Options</div> -->
+		</div>
+		<div id="outro">
+			<h2>WYNIK</h2>
+			<output>32</output>
+		</div>
+	</section>
+	<aside id="gameAid">
+		<output id="playerNameDsp"></output>
+		<div id="points">
+			<output></output>
+		</div>
+		<div id="nextItem">
+			<h3>Znajdź element</h3>
+			<output></output>
+			<hr id="l1"/>
+			<hr id="l2"/>
+		</div>
+	</aside>
+	<footer></footer>
+	<script src="ui/game.js" type="text/javascript"></script>
+</body>
+
+</html>
